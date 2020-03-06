@@ -254,14 +254,6 @@ body {
     display: flex;
     justify-content: space-between;
 }
-.copyright {
-    width: 92px;
-    height: 11px;
-    display: flex;
-}
-.copyright p {
-    text-transform: uppercase;
-}
 .footer-links {
     position: relative;
     top: 22px;
@@ -272,9 +264,16 @@ body {
     justify-content: space-between;
 }
 .copyright {
+    font-size: 12px;
+    line-height: 22px;
+    color: #767e9e;
+    font-family: "Lato";
+    font-weight: 400;
+    text-align: justify;
+    display: flex;
     position: relative;
-    top: 34px;
-    left: 23px;
+    top: 27px;
+    left: 21px;
 }
 .footer-links img:hover {
     opacity: 0.5;
