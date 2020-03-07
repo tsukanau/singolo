@@ -82,7 +82,7 @@ body {
 .maintitle span {
     position: relative;
     top: 19px;
-    right: 3px;
+    right: 2px;
     font-size: 25px;
     line-height: 6px;
     font-weight: 400;
@@ -192,7 +192,7 @@ body {
     bottom: 22px;
     left: 19px;
     width: 940px;
-    height: 70px;
+    height: 75px;
     font-size: 18px;
     line-height: 31px;
     color: #767e9e;
@@ -203,7 +203,7 @@ body {
 }
 .blocks {
     position: relative;
-    bottom: 23px;
+    bottom: 28px;
     margin-top: 51px;
     display: flex;
     width: 980px;
@@ -252,7 +252,7 @@ body {
 }
 .block-text3 {
     position: relative;
-    right: 20px;
+    right: 21px;
     top: 4px;
 }
 .subtitle-position3 {
@@ -262,13 +262,13 @@ body {
 .block-pic4 {
     position: relative;
     left: 21px;
-    bottom: 23px;
+    bottom: 28px;
     margin-right: 23px;
 }
 .block-text4 {
     position: relative;
     left: 15px;
-    bottom: 24px;
+    bottom: 29px;
 }
 .subtitle-position4 {
     position: relative;
@@ -276,13 +276,13 @@ body {
 }
 .block-pic5 {
     position: relative;
-    bottom: 24px;
+    bottom: 28px;
     margin-right: 23px;
 }
 .block-text5 {
     position: relative;
     right: 3px;
-    bottom: 24px;
+    bottom: 29px;
 }
 .subtitle-position5 {
     position: relative;
@@ -291,13 +291,13 @@ body {
 .block-pic6 {
     position: relative;
     right: 15px;
-    bottom: 24px;
+    bottom: 28px;
     margin-right: 23px;
 }
 .block-text6 {
     position: relative;
-    right: 20px;
-    bottom: 24px;
+    right: 21px;
+    bottom: 29px;
 }
 .subtitle-position6 {
     position: relative;
@@ -314,7 +314,7 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
     width: 219px;
-    height: 58px;
+    height: 62px;
     font-size: 12px;
     line-height: 22px;
     color: #767e9e;
@@ -660,6 +660,9 @@ body {
     height: 364px;
 }
 .content5-leftblock input {
+    position: relative;
+    bottom: 1px;
+    right: 1px;
     padding-bottom: 2px;
     padding-left: 15px;
     width: 600px;
