@@ -31,8 +31,12 @@ body {
 }
 .section-slider {
     background-color: #f06c64;
-    border-bottom: 6px solid #ea676b;
     height: 594px;
+}
+.section-info {
+    height: 493px;
+    background-color: #f2f2f2;
+    border-bottom: 6px solid #fff;
 }
 .section-portfolio {
     height: 864px;
@@ -57,11 +61,17 @@ body {
     width: 980px;
     margin: 0 auto;
 }
-/* Sizes of the main sections */
-/* Header */
 .content { 
     justify-content: center;
     display: flex;
+}
+.content1 ul{
+    margin-top: 0;
+}
+.content1 {
+    display: flex;
+    border: 1px solid yellow;
+    height: 600px;
 }
 .maintitle {
     position: relative;
@@ -104,13 +114,8 @@ body {
 .navigationbar li {
     list-style-type: none;
 }
-.navigationbar .firstlink {
-    color: #f06c64;
-}
 .navigationbar li:hover {
     cursor: pointer;
-    text-decoration: underline;
-    opacity: 0.5;
 }
 .navigationbar li:not(:first-child):before {
     color: #494e62;
@@ -127,54 +132,100 @@ body {
     text-decoration: none;
     text-transform: uppercase;
 }
-/* Header */
-/* Section Slider */
-.arrow-left {
+#menu .active {
+    color: #f06c64;
+}
+
+
+.section-slider {
+    background-color: #f06c64;
+    border-bottom: 6px solid #ea676b;
+    height: 594px;
+}
+.slideshow-container {
     position: relative;
-    top: 280px;
-    left: 22px;
-    width: 16px;
-    height: 27px;
+    height: 100%;
+    width: 940px;
+    margin: 0 auto;
 }
-.arrow-left:hover {
-    opacity: 0.5;
-}
-.phone-vertical {
+.secondslide {
     position: relative;
-    bottom: 18px;
-    right: 62px;
-    width: 215px;
-    height: 458px;
+    right: 40px;
 }
-.phone-horizontal {
-    position: relative;
-    top: 67px;
-    right: 28px;
-    width: 458px;
-    height: 215px;
+
+.prev, .next{
+    cursor: pointer;
+    position: absolute;
+    top: 47%;
+    width: auto;
+    transition: 0.6s ease;
 }
-.arrow-right {
-    position: relative;
-    top: 280px;
-    right: 21px;
-    width: 16px;
-    height: 27px;
+.next {
+    right: 0;
 }
-.arrow-right:hover {
-    opacity: 0.5;
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
 }
-.content1 {
-    justify-content: space-between;
-    display: flex;
+@-webkit-keyframes fade {
+    from{opacity: 4}
+    to{opacity: 1}
+}
+@keyframes fade{
+    from{opacity: 4}
+    to{opacity: 1}
 }
 .phones {
+    margin: 0 auto;
+    width: 900px;
+    height: 600px;
     display: flex;
 }
-.section-info {
-    height: 493px;
-    background-color: #f2f2f2;
-    border-bottom: 6px solid #fff;
+.verticalphone {
+    position: relative;
+    top: 53px;
+    left: 53px;
 }
+.verticalphone-display {
+    position: relative;
+    top: 117px;
+    right: 173px;
+    opacity: 0;
+}
+#clickvertical-phone {
+    position: relative;
+    width: 215px;
+    height: 460px;
+}
+.clickphones {
+    display: flex;
+    position: relative;
+    bottom: 550px;
+    left: 70px;
+}
+.horizontalphone {
+    position: relative;
+    top: 174px;
+    right: 63px;
+}
+.horizontalphone-display {
+    position: relative;
+    top: 187px;
+    right: 486px;
+    opacity: 0;
+}
+#clickhorizontal-phone {
+    position: relative;
+    top: 122px;
+    left: 95px;
+    width: 460px;
+    height: 215px;
+}
+
+
+
 .textbox {
     padding-top: 67px;
 }
@@ -321,13 +372,9 @@ body {
     font-weight: 400;
     text-align: justify;
 }
-/* Section Slider */
-/* Section Portfolio */
-.content3 {
-    height: 100px;
-    width: 100px;
-    
-}
+
+
+
 .content3-title {
     position: relative;
     top: 70px;
@@ -362,7 +409,6 @@ body {
 }
 .content3-navigationbar span:hover {
     cursor: pointer;
-    opacity: 0.5;
 }
 .portfolio-button {
     font-size: 12px;
@@ -373,9 +419,15 @@ body {
     color: #767e9e;
     border: 1px solid #666d89;
 }
-.portfolio-button1  {
+
+
+#portfolio-navBar .portfolio-button__active {
     color: #dedede;
-    border: 1px solid #c5c5c5;
+    border: 1px solid #c5c5c5
+}
+    
+.portfolio-button1  {
+    text-align: center;
     width: 27px; 
 }
 .portfolio-button2 {
@@ -394,7 +446,7 @@ body {
     position: relative;
     top: 81px;
     left: 21px;
-    width: 960px;
+    width: 966px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -403,13 +455,24 @@ body {
     margin-right: 19px;
     margin-bottom: 16px;
 }
+.portfolio-picsflex .picsflex:nth-child(1) {
+    
+}
+.portfolio-picsflex .picsflex:nth-child(2) {
+    
+}
 .portfolio-picsflex .picsflex:nth-child(3) {
     position: relative;
     left: 2px;
+    
 }
 .portfolio-picsflex .picsflex:nth-child(4) {
     position: relative;
     left: 2px;
+}
+.portfolio-picsflex .picsflex:nth-child(5) {
+}
+.portfolio-picsflex .picsflex:nth-child(6) {
 }
 .portfolio-picsflex .picsflex:nth-child(7) {
     position: relative;
@@ -439,6 +502,13 @@ body {
 }
 .portfolio-picsflex .picsflex:nth-child(n+13) {
     display: none;
+}
+
+#portfolio .active-frame {
+    outline: 5px solid #F06C64;
+    position: relative;
+    bottom: 2.5px;
+    right: 2.5px;
 }
 /* Section Portfolio */
 /* Section Abtus */
@@ -705,7 +775,7 @@ body {
     font-weight: 400;
     text-align: left;
 }
-.content5-leftblock input:last-child {
+.content5-leftblock .submit-button {
     position: relative;
     top: 10px;
     width: 100px;
@@ -725,6 +795,33 @@ body {
     border: none;
     border-radius: 5px;
     color: #f0d8d9;
+}
+.message-block {
+    width: 200px;
+    height: 190px;
+    position: fixed;
+    top: 30%;
+    left: 45%;
+    background-color: #f2f2f2;
+    color: #676d87;
+    z-index: 100;
+    border-radius: 10%;
+    border: 2px solid #2d2f3b;
+}
+.message-block__text {
+    width: 160px;
+    margin-left: 20px;
+}
+.message-block__text span:not(first-child) {
+    margin-left: 2px;
+   
+}
+.closebutton {
+    margin-top: 10px;
+    margin-left: 20px;
+    color: #676d87;
+    border: 1px solid #676d87;
+    background-color: transparent;
 }
 .content5-rightblock {
     position: relative;
@@ -814,4 +911,7 @@ body {
     transition: 0.2s;
     color: #f0d8d9;
 }
+.hidden {
+    visibility: hidden;
+  }
 /* Footer */

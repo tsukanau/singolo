@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Singolo</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <title>SingoloDOM</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
 </head>
 <body>
     <!-- Header -->
-    <header class="section-outer section-header">
+    <header name="top" class="section-outer section-header">
         <div class="wrapper">
             <div class="content">
                 <div class="maintitle">
@@ -18,49 +18,51 @@
                     <span>*</span>
                 </div>
                 <div class="navigationbar">
-                <ul>
-                    <li><a class="firstlink" href="#">Home</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
+                <ul id="menu">
+                    <li><a class="active" href="#">Home</a></li>
+                    <li><a href="#services-link">Services</a></li>
+                    <li><a href="#po-link">Portfolio</a></li>
+                    <li><a href="#about-link">About</a></li>
+                    <li><a href="#contacts-link">Contact</a></li>
                 </ul>
             </div>   
             </div>
         </div>
     </header>
     <!-- Header -->
-
     <!-- Slider section -->
     <section class="section-outer section-slider">
-        <div class="wrapper">
-            <div class="content1">
-
-                <div class="arrow-left">
-                    <a href="#"><img src="assets/pics/arrow-left.png" alt="arrow-leftpic"></a>
-                </div>
-
+        <div class="slideshow-container">
+            <div class="slide">
                 <div class="phones">
-                    <div class="phone-vertical">
-                        <img src="assets/pics/iPhone Vertical.png" alt="phonepic">
-                    </div>
-                    <div class="phone-horizontal">
-                    <img src="assets/pics/iPhone Horizontal.png" alt="phonepic">
-                    </div>
+                    <img id="verticalphone"  class="verticalphone" src="assets/phonesPics/phone-vertical.png" width="240px" height="483px" alt="vertphone">
+                    <img id="verticalphone-display" class="verticalphone-display" src="assets/phonesPics/verticalphone-hidden.png" width="188px" height="335px" alt="vertphone-disp">
+                    <img id="horizontalphone" class="horizontalphone" src="assets/phonesPics/phone-horizontal.png" width="483px" height="240px" alt="horizphone">
+                    <img id="horizontalphone-display" class="horizontalphone-display" src="assets/phonesPics/horizontalphone-hidden.png" width="333px" height="190px" alt="horizphone-disp">
                 </div>
-
-                <div class="arrow-right">
-                    <a href="#"><img src="assets/pics/arrow-right.png" alt="arrow-rightpic"></a>
+                <div class="clickphones">
+                <div id="clickvertical-phone" onclick="touchPhoneVert();" class="clickvertical-phone"></div>
+                <div id="clickhorizontal-phone" onclick="touchPhoneHor();" class="clickvertical-phone"></div>
                 </div>
             </div>
+            <div class="slide">
+                <img class="secondslide" src="assets/pics-dom/Secondslide.png" height="600px" alt="secondslide">
+            </div>
+        
+            <div class="arrows">
+                <div class="leftarrow"><img class="prev" onclick="plusSlides(-1)" src="assets/pics/arrow-left.png" alt="prev"></div>
+                <div class="rightarrow"><img class="next" onclick="plusSlides(1)" src="assets/pics/arrow-right.png" alt="next"></div>
+                </div>
+        
+
+            
         </div>
+
     </section>
     <!-- Slider section -->
-
-
     <!-- Info section -->
 
-    <section class="section-outer section-info">
+    <section id="services-link" class="section-outer section-info">
         <div class="wrapper">
             <div class="content2">
                 <div class="textbox">
@@ -157,206 +159,218 @@
 
 
     <!-- Info section -->
-    <!-- Section portfolio -->
+        <!-- Section portfolio -->
 
-    <section class="section-outer section-portfolio">
-        <div class="section-inner">
-            <div class="wrapper">
-                    <div class="content3">
-                        <div class="content3-block">
-                            <div class="content3-title">Portfolio</div>
-                            <div class="content3-subtitle"><p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p></div>
-                            <div class="content3-navigationbar">
-                                <span class="portfolio-button portfolio-button1">All</span>
-                                <span class="portfolio-button portfolio-button2">Web Design</span>
-                                <span class="portfolio-button portfolio-button3">Graphic Design</span>
-                                <span class="portfolio-button portfolio-button4">Artwork</span>
+        <section id="po-link" class="section-outer section-portfolio">
+            <div class="section-inner">
+                <div class="wrapper">
+                        <div class="content3">
+                            <div class="content3-block">
+                                <div class="content3-title">Portfolio</div>
+                                <div class="content3-subtitle"><p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p></div>
+                                <div id="portfolio-navBar" class="content3-navigationbar">
+                                    <span class="portfolio-button portfolio-button1">All</span>
+                                    <span class="portfolio-button portfolio-button2">Web Design</span>
+                                    <span class="portfolio-button portfolio-button3">Graphic Design</span>
+                                    <span class="portfolio-button portfolio-button4">Artwork</span>
+                                </div>
+                            </div>
+                            <div id="portfolio" class="portfolio-picsflex">
+                                <div id="1" class="picsflex"><img src="assets/pics-secondpart/picture1.png" alt="picture1"></div>
+                                <div id="2" class="picsflex"><img src="assets/pics-secondpart/picture2.png" alt="picture2"></div>
+                                <div id="3" class="picsflex"><img src="assets/pics-secondpart/picture3.png" alt="picture3"></div>
+                                <div id="4" class="picsflex"><img src="assets/pics-secondpart/picture4.png" alt="picture4"></div>
+                                <div id="5" class="picsflex"><img src="assets/pics-secondpart/picture5.png" alt="picture5"></div>
+                                <div id="6" class="picsflex"><img src="assets/pics-secondpart/picture6.png" alt="picture6"></div>
+                                <div id="7" class="picsflex"><img src="assets/pics-secondpart/picture7.png" alt="picture7"></div>
+                                <div id="8" class="picsflex"><img src="assets/pics-secondpart/picture8.png" alt="picture8"></div>
+                                <div id="9" class="picsflex"><img src="assets/pics-secondpart/picture9.png" alt="picture9"></div>
+                                <div id="10" class="picsflex"><img src="assets/pics-secondpart/picture10.png" alt="picture10"></div>
+                                <div id="11" class="picsflex"><img src="assets/pics-secondpart/picture11.png" alt="picture11"></div>
+                                <div id="12" class="picsflex"><img src="assets/pics-secondpart/picture12.png" alt="picture12"></div id="2">
                             </div>
                         </div>
-                        <div class="portfolio-picsflex">
-                            <div class="picsflex"><img src="assets/pics-secondpart/picture1.png" alt="picture1"></div>
-                            <div class="picsflex"><img src="assets/pics-secondpart/picture2.png" alt="picture2"></div>
-                            <div class="picsflex"><img src="assets/pics-secondpart/picture3.png" alt="picture3"></div>
-                            <div class="picsflex"><img src="assets/pics-secondpart/picture4.png" alt="picture4"></div>
-                            <div class="picsflex"><img src="assets/pics-secondpart/picture5.png" alt="picture5"></div>
-                            <div class="picsflex"><img src="assets/pics-secondpart/picture6.png" alt="picture6"></div>
-                            <div class="picsflex"><img src="assets/pics-secondpart/picture7.png" alt="picture7"></div>
-                            <div class="picsflex"><img src="assets/pics-secondpart/picture8.png" alt="picture8"></div>
-                            <div class="picsflex"><img src="assets/pics-secondpart/picture9.png" alt="picture9"></div>
-                            <div class="picsflex"><img src="assets/pics-secondpart/picture10.png" alt="picture10"></div>
-                            <div class="picsflex"><img src="assets/pics-secondpart/picture11.png" alt="picture11"></div>
-                            <div class="picsflex"><img src="assets/pics-secondpart/picture12.png" alt="picture12"></div>
-                        </div>
-                    </div>
 
+                    
+                </div>
                 
             </div>
-            
-        </div>
-    </section>
+        </section>
 
-    <!-- Section portfolio -->
-    <!-- Section abtus -->
+<!-- Section portfolio -->
+<!-- Section abtus -->
 
-    <section class="section-outer section-abtus">
-        <div class="section-inner">
-            <div class="wrapper">
-                <div class="content4">
-                    <div class="content4-block">
-                        <div class="content4-title">About Us</div>
-                        <div class="content4-subtitle"><p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p></div>
-                    </div>
-                    <div class="peopleblock">
-                        <div class="person1">
-                            <div class="person1-photo">
-                                <img src="assets/pics-secondpart/person1-ph.png" alt="person1-ph">
-                            </div>
-                            <div class="person-common-name person1-name">Adam Jensen</div>
-                            <div class="person-common-description person1-description"><p>Quisque luctus, quam eget molestie commodo,lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p></div>
-                            <div class="person-common-links person1-links">
-                                <div class="facebook">
-                                    <img src="assets/pics-secondpart/links/facebook.svg" alt="facebook">
-                                </div>
-                                <div class="google">
-                                    <img src="assets/pics-secondpart/links/google.svg" alt="google">
-                                </div>
-                                <div class="twitter">
-                                    <img src="assets/pics-secondpart/links/twitter.svg" alt="twitter">
-                                </div>
-                                <div class="linkedin">
-                                    <img src="assets/pics-secondpart/links/linkedin.svg" alt="linkedin">
-                                </div>
-
-                            </div>
-                        </div>
-
-
-
-                        <div class="person2">
-                            <div class="person2-photo">
-                                <img src="assets/pics-secondpart/person2-ph.png" alt="person2-ph">
-                            </div>
-                            <div class="person-common-name person2-name">Desmond Miles</div>
-                            <div class="person-common-description person2-description"><p>Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p></div>
-                            <div class="person-common-links person2-links">
-                                <div class="facebook">
-                                    <img src="assets/pics-secondpart/links/facebook.svg" alt="facebook">
-                                </div>
-                                <div class="google ">
-                                    <img src="assets/pics-secondpart/links/google.svg" alt="google">
-                                </div>
-                                <div class="twitter">
-                                    <img src="assets/pics-secondpart/links/twitter.svg" alt="twitter">
-                                </div>
-                                <div class="linkedin">
-                                    <img src="assets/pics-secondpart/links/linkedin.svg" alt="linkedin">
-                                </div>
-                            </div>
-                        </div>
-
-
-
-                        <div class="person3">
-                            <div class="person3-photo">
-                                <img src="assets/pics-secondpart/person3-ph.png" alt="person3-ph">
-                            </div>
-                            <div class="person-common-name person3-name">Scolara Visari</div>
-                            <div class="person-common-description person3-description"><p>Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p></div>
-                            <div class="person-common-links person3-links">
-                                <div class="facebook">
-                                    <img src="assets/pics-secondpart/links/facebook.svg" alt="facebook">
-                                </div>
-                                <div class="google">
-                                    <img src="assets/pics-secondpart/links/google.svg" alt="google">
-                                </div>
-                                <div class="twitter">
-                                    <img src="assets/pics-secondpart/links/twitter.svg" alt="twitter">
-                                </div>
-                                <div class="linkedin">
-                                    <img src="assets/pics-secondpart/links/linkedin.svg" alt="linkedin">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                
-            </div>
-            
-        </div>
-    </section>
-
-    <!-- Section abtus -->
-    <!-- Section Get A Quote -->
-
-    <section class="section-outer section-getquote">
+<section id="about-link" class="section-outer section-abtus">
+    <div class="section-inner">
         <div class="wrapper">
-       
-         <div class="content5">
-            <div class="content5-block">
-                <div class="content5-title">Get a Quote</div>
-                <div class="content5-subtitle"><p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p></div>
-            </div>
-            <div class="content5__tableblocks">
-                <div class="content5-leftblock">
-                    <form method="POST">
-                        <input type="text" id="name" name="name" placeholder="Name (Required)" required></br>
-                        <input type="email" id="email" name="mail" placeholder="Email (Required)" required></br>
-                        <input type="text" id="subject" name="subject" placeholder="Subject"></br>
-                        <textarea name="description" id="description" placeholder="Describe your project in detail..." style="resize:none;"></textarea></br>
-                        <input type="submit" id="button" value="Submit" formmethod="POST">
-                    </form>
+            <div class="content4">
+                <div class="content4-block">
+                    <div class="content4-title">About Us</div>
+                    <div class="content4-subtitle"><p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p></div>
                 </div>
-                <div class="content5-rightblock">
-                    <div class="content5-rightblock__title">Contact Information</div>
-                    <div class="content5-rightblock__subtitle"><p>Quisque hendrerit purus dapibus, ornare nibh vitae, viver&shy;ra nibh. Fusce vitae aliquam tellus.Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.</p></div>
-                    <div class="content5-rightblock__information">
-                        <ul>
-                            <li><a href="#">Elm St. 14/05 Lost City</a></li>
-                            <li><a href="tel:+03528 331 86 35">03528 331 86 35</a></li>
-                            <li><a href="mailto:info@singolo.com">info@singolo.com</a></li>
-                        </ul>
+                <div class="peopleblock">
+                    <div class="person1">
+                        <div class="person1-photo">
+                            <img src="assets/pics-secondpart/person1-ph.png" alt="person1-ph">
                         </div>
-                        
+                        <div class="person-common-name person1-name">Adam Jensen</div>
+                        <div class="person-common-description person1-description"><p>Quisque luctus, quam eget molestie commodo,lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p></div>
+                        <div class="person-common-links person1-links">
+                            <div class="facebook">
+                                <img src="assets/pics-secondpart/links/facebook.svg" alt="facebook">
+                            </div>
+                            <div class="google">
+                                <img src="assets/pics-secondpart/links/google.svg" alt="google">
+                            </div>
+                            <div class="twitter">
+                                <img src="assets/pics-secondpart/links/twitter.svg" alt="twitter">
+                            </div>
+                            <div class="linkedin">
+                                <img src="assets/pics-secondpart/links/linkedin.svg" alt="linkedin">
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                    <div class="person2">
+                        <div class="person2-photo">
+                            <img src="assets/pics-secondpart/person2-ph.png" alt="person2-ph">
+                        </div>
+                        <div class="person-common-name person2-name">Desmond Miles</div>
+                        <div class="person-common-description person2-description"><p>Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p></div>
+                        <div class="person-common-links person2-links">
+                            <div class="facebook">
+                                <img src="assets/pics-secondpart/links/facebook.svg" alt="facebook">
+                            </div>
+                            <div class="google ">
+                                <img src="assets/pics-secondpart/links/google.svg" alt="google">
+                            </div>
+                            <div class="twitter">
+                                <img src="assets/pics-secondpart/links/twitter.svg" alt="twitter">
+                            </div>
+                            <div class="linkedin">
+                                <img src="assets/pics-secondpart/links/linkedin.svg" alt="linkedin">
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="person3">
+                        <div class="person3-photo">
+                            <img src="assets/pics-secondpart/person3-ph.png" alt="person3-ph">
+                        </div>
+                        <div class="person-common-name person3-name">Scolara Visari</div>
+                        <div class="person-common-description person3-description"><p>Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p></div>
+                        <div class="person-common-links person3-links">
+                            <div class="facebook">
+                                <img src="assets/pics-secondpart/links/facebook.svg" alt="facebook">
+                            </div>
+                            <div class="google">
+                                <img src="assets/pics-secondpart/links/google.svg" alt="google">
+                            </div>
+                            <div class="twitter">
+                                <img src="assets/pics-secondpart/links/twitter.svg" alt="twitter">
+                            </div>
+                            <div class="linkedin">
+                                <img src="assets/pics-secondpart/links/linkedin.svg" alt="linkedin">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
             
+        </div>
+        
+    </div>
+</section>
+
+<!-- Section abtus -->
+<!-- Section Get A Quote -->
+
+<section id="contacts-link" class="section-outer section-getquote">
+    <div class="wrapper">
+   
+     <div class="content5">
+        <div class="content5-block">
+            <div class="content5-title">Get a Quote</div>
+            <div class="content5-subtitle"><p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p></div>
+        </div>
+        <div class="content5__tableblocks">
+            <div class="content5-leftblock">
+                <form method="POST" onsubmit="return false" id="mySingoloForm">
+            <input type="text" id="name" name="name" placeholder="Name (Required)" ></br>
+            <input type="email" id="email" name="mail" placeholder="Email (Required)" ></br>
+
+            <input type="text" id="subject" name="subject" placeholder="Subject"></br>
+            <textarea name="description" id="description" placeholder="Describe your project in detail..." style="resize:none;"></textarea></br>
+            <input class="submit-button" type="submit" id="button" value="Submit" formmethod="POST">
+            
+            <div id="message-block" class="message-block hidden">
+                <div class="message-block__text">
+                <p>Письмо отправлено<span></span></p>
+                <p>Тема:<span id="subject-result"></span></p>
+                <p>Описание:<span id="description-result"></span></p>
+                </div>
+                <button class="closebutton" id="close-btn">Ok</button>
+              </div>
+                </form>    
+            </div>
+
+            
+            <div class="content5-rightblock">
+                <div class="content5-rightblock__title">Contact Information</div>
+                <div class="content5-rightblock__subtitle"><p>Quisque hendrerit purus dapibus, ornare nibh vitae, viver&shy;ra nibh. Fusce vitae aliquam tellus.Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.</p></div>
+                <div class="content5-rightblock__information">
+                    <ul>
+                        <li><a href="#">Elm St. 14/05 Lost City</a></li>
+                        <li><a href="tel:+03528 331 86 35">03528 331 86 35</a></li>
+                        <li><a href="mailto:info@singolo.com">info@singolo.com</a></li>
+                    </ul>
                     </div>
+                    
+        
+                </div>
 
 
+            </div>
+        </div>
+           
+    </div>
+</section>
+<!-- Section Get A Quote -->
+<!-- Footer -->
+<footer class="section-outer section-footer">
+    <div class="wrapper">
+        <div class="content6">
+            <div class="copyright">
+                &copy; Copyright 2013
+            </div>
+            <div class="footer-links">
+                <div class="facebook">
+                    <img src="assets/pics-secondpart/links/facebook.svg" alt="facebook">
+                </div>
+                <div class="google">
+                    <img src="assets/pics-secondpart/links/google.svg" alt="google">
+                </div>
+                <div class="twitter">
+                    <img src="assets/pics-secondpart/links/twitter.svg" alt="twitter">
+                </div>
+                <div class="linkedin">
+                    <img src="assets/pics-secondpart/links/linkedin.svg" alt="linkedin">
                 </div>
             </div>
-               
-        </div>
-    </section>
-    <!-- Section Get A Quote -->
-    <!-- Footer -->
-    <footer class="section-outer section-footer">
-        <div class="wrapper">
-            <div class="content6">
-                <div class="copyright">
-                    &copy; Copyright 2013
-                </div>
-                <div class="footer-links">
-                    <div class="facebook">
-                        <img src="assets/pics-secondpart/links/facebook.svg" alt="facebook">
-                    </div>
-                    <div class="google">
-                        <img src="assets/pics-secondpart/links/google.svg" alt="google">
-                    </div>
-                    <div class="twitter">
-                        <img src="assets/pics-secondpart/links/twitter.svg" alt="twitter">
-                    </div>
-                    <div class="linkedin">
-                        <img src="assets/pics-secondpart/links/linkedin.svg" alt="linkedin">
-                    </div>
-                </div>
-
-            </div>
 
         </div>
 
-    </footer >
-    <!-- Footer -->
-    
+    </div>
+
+</footer >
+<!-- Footer -->
+<script src="script.js"></script>    
 </body>
 </html>
