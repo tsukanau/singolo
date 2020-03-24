@@ -12,7 +12,8 @@
     <!-- Header -->
     <header name="top" class="section-outer section-header">
         <div class="wrapper">
-            <div class="content">
+            <div id="header-content" class="content">
+                <span id="burger" class="header__hamburger hamburger"><span class="hamburger__line"></span></span>
                 <div class="maintitle">
                     <h1>singolo<span>*</span></h1>
                 </div>
@@ -27,10 +28,24 @@
                 </div>  
             </div>
         </div>
+        <div id="mobile-overlay" class="mobile-overlay">
+            <div class="navigationbar2">
+                <ul id="menu2">
+                    <li><a class="navigationItem active" id="navigationHome" href="#">Home</a></li>
+                    <li><a class="navigationItem" id="navigationServ" href="#services-link">Services</a></li>
+                    <li><a class="navigationItem" id="navigationPort" href="#po-link">Portfolio</a></li>
+                    <li><a class="navigationItem" id="navigationAbout" href="#about-link">About</a></li>
+                    <li><a class="navigationItem" id="navigationCont" href="#contacts-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        
     </header>
     <!-- Header -->
 
     <!-- Slider -->
+    
     <section id="section-slider" class="section-outer section-slider">
      
     <div class="carousel">
@@ -354,7 +369,7 @@
             <div class="copyright">
                 &copy; Copyright 2013
             </div>
-            <div class="personlinks">
+            <div class="footerlinks">
                 <div class="facebook">
                     <img src="assets/AboutUs Section/links/facebook.svg" alt="facebook">
                 </div>
