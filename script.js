@@ -1,3 +1,4 @@
+
 //header
 const MENU = document.getElementById('menu');
 
@@ -270,23 +271,26 @@ CLOSEBUTTON.addEventListener('click', () => {
 const OVERLAY = document.getElementById('mobile-overlay');
 const BURGER = document.getElementById('burger');
 const CONTENT = document.getElementById('header-content');
-
+const COVER = document.getElementById('coverhidden');
 
 BURGER.addEventListener('click', () => {
     if (OVERLAY.classList.contains('activeoverlay')) {
         OVERLAY.classList.remove('activeoverlay');
-    } else OVERLAY.classList.add('activeoverlay');
-    
+	} else OVERLAY.classList.add('activeoverlay');
+	if (COVER.classList.contains('coveractive')) {
+        COVER.classList.remove('coveractive');
+	} else COVER.classList.add('coveractive');
+	
     
     if (BURGER.classList.contains('hamburgeractive')) {
         BURGER.classList.remove('hamburgeractive');
-    } else BURGER.classList.add('hamburgeractive');
+	} else BURGER.classList.add('hamburgeractive');
+	
     
     if (CONTENT.classList.contains('activecontent')) {
         CONTENT.classList.remove('activecontent');
 	} else CONTENT.classList.add('activecontent');
 });
-
 
 const MENU2 = document.getElementById('menu2');
 
@@ -296,9 +300,11 @@ MENU2.addEventListener('click', (event) => {
     OVERLAY.classList.remove('activeoverlay');
     BURGER.classList.remove('hamburgeractive');
 	CONTENT.classList.remove('activecontent');
+	if (COVER.classList.contains('coveractive')) {
+        COVER.classList.remove('coveractive');
+	} else COVER.classList.add('coveractive');
 	
 });
-
 
 	
 
