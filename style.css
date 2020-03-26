@@ -1056,12 +1056,13 @@ body {
         top: 30%;
         left: calc(50% - 150px);
     }
-    
     .message-block__text {
         width: 250px;
     }
     .getquote-leftblock {
-        max-width: 300px;
+        width: 300px;
+        display: flex;
+        justify-content: center;
         margin: auto;
     }
 
