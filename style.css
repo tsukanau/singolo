@@ -1060,7 +1060,7 @@ body {
         width: 250px;
     }
     .getquote-leftblock {
-        width: 300px;
+        max-width: 300px;
         display: flex;
         justify-content: center;
         margin: auto;
@@ -1073,6 +1073,12 @@ body {
     }
     .getquote-leftblock textarea {
         width: 200px;
+    }
+    .getquote-leftblock {
+        max-width: 300px;
+        display: flex;
+        justify-content: start;
+        margin: auto;
     }
 }
 /* GetAQuote */
