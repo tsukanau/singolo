@@ -128,8 +128,7 @@ body {
     justify-content: center;
 }
 .navigationbar2 {
-    margin-top: 130px;
-    
+    margin-top: 130px; 
 }
 .navigationbar2:hover {
     cursor: pointer;
@@ -216,7 +215,7 @@ body {
     top: 396px;
     left: 50%;
     width: 100%;
-    max-width: 1180px;
+    max-width: 1020px;
     text-align: center;
     transform: translate(-50%, -50%);
 }
@@ -233,8 +232,8 @@ body {
     margin: 0 auto;
 }
 .project-image img {
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
 }
 .activeslide,
 .next {
@@ -249,7 +248,7 @@ body {
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 15%;
+    width: 1%;
     cursor: pointer;
 }
 .control.left {
@@ -299,167 +298,176 @@ body {
     }
 }
 .phones {
-    margin: 0 auto;
-    position: relative;
-    display: flex;
-    width: 940px;
+    margin-top: 50px;
+    height: 600px;
 }
 .verticalphone {
-    position: relative;
-    top: 52px;
-    left: 71px;
+    max-width: 240px;
+    max-height: 483px;
+}
+.horizontalphone {
+    max-width: 483px;
+    max-height: 240px;
 }
 .verticalphone-display {
     position: relative;
-    top: 116px;
-    right: 155px;
-    opacity: 1;
-}
-.horizontalphone {
-    position: relative;
-    top: 173px;
-    right: 42px;
+    bottom: 536px;
+    right: 86px;
+    width: 190px;
+    height: 335px;
+    opacity: 0;
 }
 .horizontalphone-display {
     position: relative;
-    top: 186px;
-    right: 465px;
-    opacity: 1;
+    bottom: 490px;
+    left: 11px;
+    width: 335px;
+    height: 189px;
+    opacity: 0;
 }
 .clickphones {
-    margin: 0 auto;
-    position: relative;
-    display: flex;
     width: 940px;
+    margin: 0 auto;
 }
 .clickphones:hover {
     cursor: pointer;
 }
 .clickvertical-phone {
     position: relative;
-    bottom: 432px;
-    left: 72px;
-    width: 215px;
+    bottom: 940px;
+    right: 24px;
+    width: 216px;
     height: 458px;
+    border-radius: 25px;
+    opacity: 0;
 }
 .clickhorizontal-phone {
     position: relative;
-    bottom: 312px;
-    left: 172px;
+    bottom: 937px;
     width: 458px;
-    height: 215px;
+    height: 216px;
+    border-radius: 25px;
+    opacity: 0;
 }
+
 @media screen and (max-width: 1020px) {
+    .clickphones {
+        margin: auto;
+        width: 100%;
+    }
     .phones {
-        width: 710px;
+        margin-top: 100px;
     }
     .verticalphone {
-        width: 181px;
-        height: 364px;
+        max-width: 181px;
+        max-height: 364px;
+    }
+    .horizontalphone {
+        max-width: 364px;
+        max-height: 181px;
     }
     .verticalphone-display {
         position: relative;
-        top: 101px;
-        right: 100px;
-        width: 143px;
-        height: 252px;
-    }
-    .horizontalphone {
-        width: 364px;
-        height: 181px;
+        bottom: 551px;
+        right: 66px;
+        max-width: 144px;
+        max-height: 251px;
     }
     .horizontalphone-display {
-        width: 252px;
-        height: 143px;
         position: relative;
-        top: 183px;
-        right: 361px;
-    }
-    .clickphones {
-        width: 650px;
+        bottom: 514px;
+        left: 7px;
+        max-width: 252px;
+        max-height: 144px;
     }
     .clickvertical-phone {
         position: relative;
-        bottom: 314px;
-        left: 43px;
-        width: 163px;
+        bottom: 854px;
+        right: 17px;
+        width: 162px;
         height: 344px;
+        border-radius: 20px;
     }
     .clickhorizontal-phone {
-        width: 344px;
-        height: 163px;
         position: relative;
-        bottom: 193px;
-        left: 90px;
+        bottom: 854px;
+        width: 344px;
+        height: 162px;
+        border-radius: 20px;
     }
+  
   }
   @media screen and (max-width: 768px) {
-    .items-container {
-        height: 350px;
-        overflow: hidden;
+    .project-image {
+        margin-top: 50px;
+        width: 300px;
+    }
+    .activeslide {
+        height: 300px;
     }
     .phones {
-        width: 510px;
-    }
-    .verticalphone {
-        width: 88px;
-        height: 177px;
-        position: relative;
-        top: 67px;
-        border: 1px solid palegreen;
-    }
-    .verticalphone-display {
-        position: relative;
-        top: 20px;
-        left: 20px;
-        width: 122px;
-        height: 69px;
-    }
-    .horizontalphone {
-        width: 177px;
-        height: 88px;
-        position: relative;
-        top: 120px;
-        border: 1px solid palegreen;
-    }
-    .horizontalphone-display {
-        position: relative;
-        top: 92px;
-        right: 314px;
-        width: 69px;
-        height: 122px;
-    }
-    .clickphones {
-        width: 650px;
-    }
-    .clickvertical-phone {
-        position: relative;
-        bottom: 314px;
-        left: 43px;
-        width: 163px;
-        height: 344px;
-        border: 1px solid teal;
-    }
-    .clickhorizontal-phone {
-        width: 344px;
-        height: 163px;
-        position: relative;
-        bottom: 193px;
-        left: 90px;
-        border: 1px solid teal;
+        margin-top: 50px;
+        height: 300px;
     }
     .section-slider {
-        height: 218px;
+        max-height: 300px;
+    }
+
+    .section-slider-blue {
+        background-color: #648BF0;
+        border-bottom: 6px solid #648BF0;
     }
     .carousel {
         position: absolute;
-        top: 220px;
+        top: 250px;
         left: 50%;
         width: 100%;
+        max-width: 1020px;
+        text-align: center;
+        transform: translate(-50%, -50%);
     }
-    .project-image {
-        width: 60%;
-        height: 274px;
+    .items-container {
+        position: relative;
+        width: 100%;
+        max-height: 300px;
+        overflow: hidden;
+    }
+    .verticalphone {
+        max-width: 88px;
+        max-height: 178px;
+    }
+    .horizontalphone {
+        max-width: 178px;
+        max-height: 88px;
+    }
+    .verticalphone-display {
+        position: relative;
+        bottom: 277px;
+        right: 31px;
+        width: 69px;
+        height: 123px;
+    }
+    .horizontalphone-display {
+        position: relative;
+        bottom: 260px;
+        left: 3px;
+        width: 123px;
+        height: 69px;
+    }
+    .clickvertical-phone {
+        position: relative;
+        bottom: 428px;
+        right: 7px;
+        width: 79px;
+        height: 168px;
+        border-radius: 12px;
+    }
+    .clickhorizontal-phone {
+        position: relative;
+        bottom: 428px;
+        width: 168px;
+        height: 79px;
+        border-radius: 12px;
     }
   }
 /* Slider */
@@ -787,16 +795,18 @@ body {
     padding-bottom: 23px;
 }
 .personlinks {
-    max-width: 152px;
-    display: grid;
-    grid-template-areas: 
-    "a a a a";
-    grid-gap: 8px;    
+    display: flex;
 }
+.personlinks>div {
+    margin-right: 8px;
+}
+
+
 .personlinks img:hover {
     opacity: 0.5;
     cursor: pointer;
 }
+
 @media screen and (max-width: 768px) {
     .section-abtus {
         height: 100%;
@@ -807,7 +817,16 @@ body {
     .aboutus-subtitle {
         padding-bottom: 14px;
     }
+    .content4 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .person {
+        max-width: 300px;
+    }
     .peopleblock {
+        width: 100%;
         display: grid;
         grid-template-areas: 
         "a"
@@ -815,6 +834,32 @@ body {
         "a";
         padding-bottom: 75px;
     }
+    .peopleblock .person {
+        margin: 0 auto;
+    }
+    .person .personphoto {
+        display: flex;
+        justify-content: center;
+    }
+    .person .person-name {
+        display: flex;
+        justify-content: center;
+    }
+    .person .person-description {
+        display: flex;
+        justify-content: center;
+    }
+    .person .personlinks {
+        display: flex;
+        justify-content: center;
+    }
+    .person .personlinks>div {
+        margin-right: 8px;
+    }
+
+    
+
+
 }
 /* AboutUs */
 /* GetAQuote */
@@ -1009,11 +1054,17 @@ body {
         height: 190px;
         position: fixed;
         top: 30%;
-        left: 10%;
+        left: calc(50% - 150px);
     }
+    
     .message-block__text {
         width: 250px;
     }
+    .getquote-leftblock {
+        max-width: 300px;
+        margin: auto;
+    }
+
 }
 @media screen and (max-width: 375px) {
     .getquote-leftblock input {
