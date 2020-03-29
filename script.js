@@ -1,4 +1,3 @@
-
 //header
 const MENU = document.getElementById('menu');
 
@@ -28,6 +27,42 @@ function moveToAnchor() {
 
 }
 window.addEventListener('scroll', () => moveToAnchor());
+
+
+const newMenu = document.getElementById('menu2');
+
+function moveToAnchor2() {
+    if (window.pageYOffset > '316' && window.pageYOffset < '1300') {
+        newMenu.querySelectorAll('.navigationItem')
+            .forEach(el => el.classList.remove('active'));
+            newMenu.querySelector('#navigationServ').classList.add('active');
+}   else if (window.pageYOffset > '-1' && window.pageYOffset < '315') {
+    newMenu.querySelectorAll('.navigationItem')
+        .forEach(el => el.classList.remove('active'));
+        newMenu.querySelector('#navigationHome').classList.add('active');
+}   else if (window.pageYOffset > '1301' && window.pageYOffset < '2564') {
+    newMenu.querySelectorAll('.navigationItem')
+        .forEach(el => el.classList.remove('active'));
+        newMenu.querySelector('#navigationPort').classList.add('active');
+}   else if (window.pageYOffset > '2565' && window.pageYOffset < '4239') {
+    newMenu.querySelectorAll('.navigationItem')
+        .forEach(el => el.classList.remove('active'));
+    newMenu.querySelector('#navigationAbout').classList.add('active');
+}   else if (window.pageYOffset > '4239') {
+    newMenu.querySelectorAll('.navigationItem')
+        .forEach(el => el.classList.remove('active'));
+    newMenu.querySelector('#navigationCont').classList.add('active');
+}
+
+
+}
+window.addEventListener('scroll', () => moveToAnchor2());
+
+
+
+
+
+
 
 //slider and swiper
 let CHANGE = document.getElementById('section-slider')
